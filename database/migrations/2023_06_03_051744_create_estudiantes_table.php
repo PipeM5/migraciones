@@ -13,8 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('estudiantes', function (Blueprint $table) {
-            
+        Schema::create('estudiantes', function (Blueprint $table) {            
             $table->timestamps();
             $table->char('cod_estudiante', 4);
             $table->char('nom_estudiante', 30);
@@ -27,8 +26,7 @@ return new class extends Migration
             $table->foreign('ciudad')->references('cod_ciudad')->on('ciudades');
             $table->foreign('barrio')->references('cod_barrio')->on('barrios');
             $table->foreign('programa')->references('cod_programa')->on('programas');
-            $table->primary('cod_estudiante');
-           
+            $table->primary('cod_estudiante'); 
         });
     }
 

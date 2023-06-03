@@ -13,8 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ciudades', function (Blueprint $table) {
-           
+        Schema::create('ciudades', function (Blueprint $table) {           
             $table->timestamps();
             $table->char('cod_ciudad', 5);
             $table->char('nom_ciudad', 20);

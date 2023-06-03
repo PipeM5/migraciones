@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::create('regnotas', function (Blueprint $table) {
-           
             $table->timestamps();
             $table->char('estudiante', 4);
             $table->char('materia', 2);           
