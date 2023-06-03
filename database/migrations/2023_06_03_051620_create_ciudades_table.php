@@ -14,8 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ciudades', function (Blueprint $table) {
-            $table->id();
+           
             $table->timestamps();
+            $table->char('cod_ciudad', 5);
+            $table->char('nom_ciudad', 20);
+            $table->char('departamento', 2);
+            $table->primary('cod_ciudad');
+            $table->foreign('departamento')->references('cod_departamento')->on('departamentos');
+        
         });
     }
 

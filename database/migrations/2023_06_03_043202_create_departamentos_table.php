@@ -14,8 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('departamentos', function (Blueprint $table) {
-            $table->id();
+            
             $table->timestamps();
+            $table->char('cod_departamento', 2);
+            $table->char('nom_departamento', 30);
+            $table->primary('cod_departamento');
         });
     }
 

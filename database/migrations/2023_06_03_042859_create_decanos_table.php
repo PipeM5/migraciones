@@ -14,8 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('decanos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+           
+            $table->timestamps();          
+            $table->char('cod_decano', 2);
+            $table->char('nom_decano', 40);
+            $table->char('facultad', 2);
+            $table->primary('cod_decano');
+            $table->foreign('facultad')->references('cod_facultad')->on('facultades');
+        
+       
         });
     }
 
