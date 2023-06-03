@@ -14,8 +14,21 @@ return new class extends Migration
     public function up()
     {
         Schema::create('estudiantes', function (Blueprint $table) {
-            $table->id();
+            
             $table->timestamps();
+            $table->char('cod_estudiante', 4);
+            $table->char('nom_estudiante', 30);
+            $table->smallInteger('estudiante');
+            $table->date('fech_estudiante');
+            $table->char('sex_estudiante', 1);
+            $table->char('ciudad', 5);
+            $table->char('barrio', 3);           
+            $table->char('programa', 2);
+            $table->foreign('ciudad')->references('cod_ciudad')->on('ciudades');
+            $table->foreign('barrio')->references('cod_barrio')->on('barrios');
+            $table->foreign('programa')->references('cod_programa')->on('programas');
+            $table->primary('cod_estudiante');
+           
         });
     }
 

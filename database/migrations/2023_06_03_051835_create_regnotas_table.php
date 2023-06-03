@@ -14,8 +14,19 @@ return new class extends Migration
     public function up()
     {
         Schema::create('regnotas', function (Blueprint $table) {
-            $table->id();
+           
             $table->timestamps();
+            $table->char('estudiante', 4);
+            $table->char('materia', 2);           
+            $table->char('profesor', 2);
+            $table->foreign('estudiante')->references('cod_estudiante')->on('estudiantes');
+            $table->foreign('materia')->references('cod_materia')->on('materias');
+            $table->foreign('profesor')->references('cod_profesor')->on('profesores');
+            $table->float('parcial_1');
+            $table->float('parcial_2');
+            $table->float('e_final');
+            $table->float('n_final');
+            $table->char('estado', 1);  
         });
     }
 

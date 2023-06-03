@@ -20,6 +20,7 @@ return new class extends Migration
             $table->char('facultad', 2);
             $table->primary('cod_programa');
             $table->foreign('facultad')->references('cod_facultad')->on('facultades');
+       
         });
     }
 
