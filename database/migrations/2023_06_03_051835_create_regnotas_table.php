@@ -18,6 +18,10 @@ return new class extends Migration
             $table->char('estudiante', 4);
             $table->char('materia', 2);           
             $table->char('profesor', 2);
+            $table->primary('estudiante');
+            $table->primary('cod_estudiante');
+            $table->primary('materia');
+            $table->primary('profesor');
             $table->foreign('estudiante')->references('cod_estudiante')->on('estudiantes');
             $table->foreign('materia')->references('cod_materia')->on('materias');
             $table->foreign('profesor')->references('cod_profesor')->on('profesores');
