@@ -26,4 +26,10 @@ class Profesores extends Controller
         $profesor->save();
         return redirect()->route('listadoProfe');
     }
+    public function eliminar($id){
+       
+        $profesor = Profesor::findOrFail($id);
+        $profesor->delete();
+        return redirect()->route('listadoProfe');
+    }
 }
