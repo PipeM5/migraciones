@@ -17,7 +17,7 @@ return new class extends Migration
             $table->timestamps();
             $table->char('cod_estudiante', 4);
             $table->char('nom_estudiante', 30);
-            $table->smallInteger('estudiante');
+            $table->smallInteger('edad_estudiante');
             $table->date('fech_estudiante');
             $table->char('sex_estudiante', 1);
             $table->char('ciudad', 5);

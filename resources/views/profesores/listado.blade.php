@@ -34,7 +34,7 @@
       <td>{{$f->cod_profesor}}</td>
       <td>{{$f->nom_profesor}}</td>
       <td>{{$f->cat_profesor}}</td>
-      <td>@mdo</td>
+      
 
       <td>
 

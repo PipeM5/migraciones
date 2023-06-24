@@ -27,7 +27,8 @@
             <label for="nombreFacultad" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="nombreFacultad" name="nombreFacultad" placeholder="Ingrese el nombre">
         </div>
-
+        
+       
         <button type="submit" class="btn btn-success">Registrar</button>
    
 

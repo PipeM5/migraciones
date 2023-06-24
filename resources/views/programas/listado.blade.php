@@ -34,7 +34,7 @@
       <td>{{$f->cod_programa}}</td>
       <td>{{$f->nom_programa}}</td>
       <td>{{$f->facultad}}</td>
-      <td>@mdo</td>
+   
 
       <td>
 

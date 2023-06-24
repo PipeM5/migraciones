@@ -32,7 +32,7 @@
       <th scope="row">{{$contador}}</th>
       <td>{{$f->cod_facultad}}</td>
       <td>{{$f->nom_facultad}}</td>
-      <td>@mdo</td>
+      
 
       <td>
 
