@@ -34,4 +34,25 @@
       <td>{{$f->cod_profesor}}</td>
       <td>{{$f->nom_profesor}}</td>
       <td>{{$f->cat_profesor}}</td>
-      <td>@mdo…
+      <td>@mdo</td>
+
+      <td>
+
+      <a  class="btn btn-primary">Editar</a>
+      <a  class="btn btn-danger" href ="{{route('eliminarProfe', $f->cod_profesor)}}">Eliminar</a>
+      </td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
+
+
+@stop
+
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+
+@section('js')
+    <script> console.log('Hi!'); </script>
+@stop
