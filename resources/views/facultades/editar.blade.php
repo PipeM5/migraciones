@@ -19,12 +19,12 @@
 
 
         <div class="mb-3">
-            <label for="codigoFacultad" class="form-label">Nuevo Código</label>
+            <label for="codigoFacultad" class="form-label">Código</label>
             <input type="text" class="form-control" id="codigoFacultad" name="codigoFacultad" value="{{$facultad->cod_facultad}}" >
         </div>
 
         <div class="mb-3">
-            <label for="nombreFacultad" class="form-label">Nuevo Nombre</label>
+            <label for="nombreFacultad" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="nombreFacultad" name="nombreFacultad" value="{{$facultad->nom_facultad}}">
         </div>
         

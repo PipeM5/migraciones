@@ -32,6 +32,21 @@ class Programas extends Controller
         return redirect()->route('listadoPro');
     }
 
+    public function editar_registro($id){
+        $programa = Programa::findOrFail($id);
+        return view('programas.editar', ['programa' => $programa]);
+    }
+    
+    public function editar(Request $r,$id){
+        $programa = Programa::findOrFail($id);
+
+        $programa->cod_programa = $r->input('codigoPrograma');
+        $programa->nom_programa = $r->input('nombrePrograma');
+        $programa->facultad = $r->input('facultad');
+        $programa->save();
+        return redirect()->route('listadoPro');
+    }
+
 
     public function eliminar($id){
        

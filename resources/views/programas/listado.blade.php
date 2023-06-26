@@ -38,7 +38,7 @@
 
       <td>
 
-      <a  class="btn btn-primary">Editar</a>
+      <a  class="btn btn-primary" href ="{{route('editarPro', $f->cod_programa)}}">Editar</a>
       <a  class="btn btn-danger" href ="{{route('eliminarPro', $f->cod_programa)}}">Eliminar</a>
       </td>
     </tr>
