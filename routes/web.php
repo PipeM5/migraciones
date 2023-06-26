@@ -26,12 +26,17 @@ Route::get('/', function () {
 Route::get('/dashboard', [HomeController::class, 'index']);
 Route::get('/facultades/listado', [Facultades::class, 'index'])->name ('listadoFac');
 Route::get('/facultades/eliminar/{id}', [Facultades::class, 'eliminar'])->name ('eliminarFac');
+
+Route::get('/facultades/editar/{id}', [Facultades::class, 'editar_registro'])->name ('editarFac');
+Route::post('/facultades/editar/{id}', [Facultades::class, 'editar'])->name ('editandoFac');
+
 Route::get('/facultades/registrar', [Facultades::class, 'form_registro']);
 Route::post('/facultades/registrar', [Facultades::class, 'registrar']);
 
 Route::get('/regnotas/listado', [Regnotas::class, 'index']);
 Route::get('/profesores/listado', [Profesores::class, 'index'])->name ('listadoProfe');;
 Route::get('/profesores/eliminar/{id}', [Profesores::class, 'eliminar'])->name ('eliminarProfe');
+
 Route::get('/profesores/registrar', [Profesores::class, 'form_registro']);
 Route::post('/profesores/registrar', [Profesores::class, 'registrar']);
 
